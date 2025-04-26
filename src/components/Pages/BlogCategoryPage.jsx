@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import posts from '../../dataa/post';
-import '../styles/BlogCategoryPage.css'; // You can style it as needed
+import '../styles/BlogCategoryPage.css'; 
 
 const BlogCategoryPage = () => {
   const { categoryName } = useParams();

@@ -70,7 +70,7 @@ const CategorySection = ({ posts, categories }) => {
         </div>
       </div>
 
-      {/* Show a loading spinner while data is being fetched/loaded */}
+
       {isLoading ? (
         <div className="loading-spinner">Loading...</div>
       ) : (
@@ -100,19 +100,19 @@ const CategorySection = ({ posts, categories }) => {
         </>
       )}
 
-      {/* Pagination Buttons (Back and Next) */}
+      {/* (Back and Next) */}
       <div className="pagination">
         <button
           className="pagination-btn back-btn"
           onClick={handlePrevPage}
-          disabled={currentPage === 1 || isLoading} // Disable if on the first page or loading
+          disabled={currentPage === 1 || isLoading} 
         >
           Back
         </button>
         <button
           className="pagination-btn next-btn"
           onClick={handleNextPage}
-          disabled={endIndex >= filteredPosts.length || isLoading} // Disable if no more posts to load or loading
+          disabled={endIndex >= filteredPosts.length || isLoading} 
         >
           Next
         </button>

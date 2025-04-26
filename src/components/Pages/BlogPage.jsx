@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import posts from '../../dataa/post'; // Adjust path if needed
+import posts from '../../dataa/post'; 
 import '../styles/BlogPage.css';
 
 const BlogPage = () => {
