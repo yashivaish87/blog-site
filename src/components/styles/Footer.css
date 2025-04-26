@@ -1,0 +1,119 @@
+/* footer */
+.site-footer {
+    background: #1a1a1a;
+    color: #ccc;
+    padding: 2rem 1rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    margin: 1rem;
+  }
+  
+  .footer-section h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-section ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+
+  .social-icon1:hover {
+    color: #3e526a; 
+  }
+  .social-icon2:hover {
+    color: #dc31c3; 
+  }
+  .social-icon3:hover {
+    color: #0070f3; 
+  }
+  .social-icon4:hover {
+    color: #f61111; 
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 1.5rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+  }
+  
+  .social-footer-section {
+    margin: 2rem 0;
+  }
+  .category-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+  }
+  
+  .category-links li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  
+  .category-links li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  @media (max-width: 786px) {
+    /* footer */
+  .site-footer {
+    padding: 1rem; /* Even tighter padding */
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .category-links {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for better space */
+    gap: 0.15rem;
+  }
+
+  .social-footer-section {
+    padding : 2rem;
+    margin:2rem 0 0 0;
+    display:inline-block;
+   justify-content: center;
+   border-top: 1px solid #fff;
+   border-bottom:1px solid #fff ;
+
+  }
+  }  

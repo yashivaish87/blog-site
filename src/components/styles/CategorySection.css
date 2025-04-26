@@ -1,0 +1,103 @@
+/* Styling for the Category Section */
+.category-section {
+    padding: 20px;
+    position: relative;
+  }
+  
+  .category-nav {
+    margin-bottom: 20px;
+  }
+  .category-nav h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .category-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .category-btn {
+    padding: 10px 15px;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .category-btn.active,
+  .category-btn:hover {
+    background-color: #ff5a5f;
+    color: white;
+  }
+  
+  .no-posts-message {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+    padding: 2rem;
+  }
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .blog-item {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .blog-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-content {
+    flex: 1;
+  }
+  
+  .read-more-btn {
+    color: white#ff5a5f;
+    text-decoration: none;
+  }
+  
+  /* Pagination Buttons */
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .pagination-btn {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto;
+    text-align: center;
+  }
+  
+  .pagination-btn:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background-color: #e0484f;
+  }
+  
+  .back-btn {
+    text-align: left;
+  }
+  
+  .next-btn {
+    text-align: right;
+  }
+  

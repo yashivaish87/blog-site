@@ -1,0 +1,135 @@
+
+/* styles/FeaturedSection.css */
+.featured-section {
+  display: grid;
+  grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+  gap: var(--gap);
+  margin: 40px 20px;
+}
+
+/* Featured main full width (75%) */
+.featured-main-full {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+}
+.featured-main-full h2 {
+  margin-bottom: 16px;
+}
+.featured-post-full {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid none;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.hover-card:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.hover-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  text-align: right;
+  
+  margin-right: 0;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff5a5f;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #e0484f;
+}
+
+
+/* Trending sidebar (25%) */
+.trending-sidebar {
+  flex: 1;
+}
+.trending-sidebar h2 {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.trending-posts {
+  display: flex;
+  flex-direction: column;
+  border:1px solid #999;
+  border-radius: 1rem;
+  text-align: center;
+  padding:1rem 0;
+  margin-top: auto;
+  gap: 12px;
+}
+.trending-post h4 {
+  margin: 0 0 4px;
+}
+.trending-post h4:hover {
+  color: #ff5a5f;
+  text-decoration: underline;
+}
+.trending-post .category {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .featured-section { grid-template-columns: 1fr; }
+
+  .trending-sidebar {
+    margin-top: 20px;
+  }
+}
+
+/* Medium screens (786px to 1199px) */
+@media (max-width: 1199px) and (min-width: 786px) {
+  .featured-section {
+    grid-template-columns: 1fr; /* Stack them vertically */
+  }
+
+  .trending-sidebar {
+    margin-top: 20px;
+  }
+}

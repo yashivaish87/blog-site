@@ -1,0 +1,328 @@
+/* Top-bar with date & social icons */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .top-bar-left {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .social-icons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .social-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .social-icon1:hover {
+    color: #3e526a; 
+  }
+  .social-icon2:hover {
+    color: #dc31c3; 
+  }
+  .social-icon3:hover {
+    color: #0070f3; 
+  }
+  .social-icon4:hover {
+    color: #f61111; 
+  }
+  
+  /* Header with title, nav & search icon */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #90a6ca;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+  }
+  .header-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mobile-menu {
+    display: none;  /*  mobile view */
+    cursor: pointer;
+  }
+  .blog-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-menu-button,
+  .mobile-nav {
+    display: none;
+  }
+  .nav {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.875rem; 
+    padding-right: 10vh;
+  }
+  
+  .nav-item {
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .nav-link {
+    color: #1f2937; 
+    text-decoration: none;
+    padding: 0.25rem;
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color:#fff;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0;
+    width: 10rem;
+    background: #ffffff;
+    border-radius: 0.375rem; 
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 10;
+  }
+  
+  .nav-item:hover .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+   
+  }
+  
+  .dropdown ul {
+    padding: -0.5rem -0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .dropdown-item a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #4b5563; 
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown-item a:hover {
+    background: #f3f4f6; 
+  }
+  .mobile-search-button {
+    display: none; /* mobile view*/
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Advertisement banner */
+  .ad-banner {
+    background: #e0e0e0;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #555;
+  }
+  
+  /* Search bar */
+  .search-wrapper {
+    position: relative;
+    border: none;
+    
+  }
+  .search-overlay {
+  top: 100%;        
+  left: 0;
+  width: 100%;
+  display: flex;
+  border: 1px solid none;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1000;
+}
+  .mobile-menu-button{
+    display: none; 
+  }
+  .desktop-search-button {
+    display: block;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    top: 50%;
+    right: 3.5rem;        
+    transform: translateY(-50%);
+    color: #333;
+    z-index: 10;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.75rem 3rem 0.75rem 1.25rem;
+    border: none;
+    border-radius: 9999px;
+    font-size: 1rem;
+    outline: none;
+  }
+  .search-button {
+    position: absolute;
+    top: 10%;
+    right: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: #005bb5;
+    border-radius: 9999px;;
+    color: #fff;
+    cursor: pointer;
+    height: auto;
+    width: auto;
+  }
+
+  @media (max-width: 786px) {
+
+    .top-bar {
+        display: none;
+    }
+
+    /* style mobile top-bar inside menu */
+    .mobile-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: #555;
+      padding: 1rem;
+      border-top: 1px solid #ddd;
+      background-color: #f5f5f5;
+      position: sticky;
+      bottom: 0; /* Position it at the bottom of the mobile nav */
+      width: 100%; /* Ensure it takes full width */
+      z-index: 1010; 
+    }
+      
+      .mobile-top-bar .social-icons {
+        display: flex;
+        gap: 0.5rem;
+      }
+      .nav-item:hover .dropdown {
+        display: none;
+      }
+      .nav-link:hover {
+        color:#0070f3;
+      }
+
+    /* /* .nav-links {
+      display: none;
+    } */
+    .mobile-menu,
+    .mobile-search-button {
+      display: block;
+      
+    }
+    /* .desktop-nav {
+      display: none;
+    } */ 
+  
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #90a6ca;
+      z-index: 1000; /* Ensure header stays above other content */
+      padding: 1rem;
+      width: 100%; /* Ensure it spans the full width */
+  }
+
+    .header-left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+      }
+
+    /* show hamburger */
+    .mobile-menu-button {
+        position: absolute;
+        left: 1rem;
+        display: inline-flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+      
+    }
+
+    .blog-title { 
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+      }
+
+
+    /* hide desktop nav */
+    .desktop-nav {
+      display: none;
+    }
+  
+    .mobile-nav {
+      position: fixed;
+      top: 6.9rem; /* Space it below the header */
+      right:0;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background: #fff;
+      z-index: 1000;
+      height: 100vh;
+  }
+  
+    /* style mobile nav links */
+    .mobile-nav-links {
+      flex: 1; 
+      display: flex;
+      overflow-y: auto;
+      flex-direction: column;
+      padding: 1rem ;
+    }
+
+    .mobile-nav-links .nav-item {
+      margin-bottom: 0.5rem;
+    }
+  
+    /* search-icon */
+    .mobile-search-button {
+        display: flex;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        right: 1rem;
+    }
+
+    .desktop-search-button{
+        display: none;
+    }
+
+    .search-overlay {
+      display: inline;
+    }
+   
+}
