@@ -5,6 +5,7 @@ import Footer from './components/Pages/Footer'
 import BlogHomePage from './components/BlogHomePage'
 import BlogCategoryPage from './components/Pages/BlogCategoryPage'
 import BlogPage from './components/Pages/BlogPage'
+import SubCategoryPage from './components/Pages/SubCategoryPage';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<BlogHomePage />} />
           <Route path="/category/:categoryName" element={<BlogCategoryPage />} />
+          <Route path="/category/:categoryName/:subCategoryName" element={<SubCategoryPage />} />
           <Route path="/blog/:id" element={<BlogPage />} />
         </Routes>
     </main>

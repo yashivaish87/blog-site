@@ -97,24 +97,34 @@ const Header = () => {
             {/* Navigation */}  
             {!menuOpen && (
             <nav className="nav desktop-nav">
-                {navItems.map(item => (
-                <div key={item.label} className="nav-item">
-                    <Link to={item.label === "All" ? "/" : `/category/${item.label.toLowerCase()}`} className="nav-link">{item.label}
-                    </Link>
-                    {item.links.length > 0 && (
-                    <div className="dropdown">
-                        <ul>
-                        {item.links.map(link => (
-                            <li key={link} className="dropdown-item">
-                            <Link to={`/category/${link.toLowerCase()}`}  onClick={() => setMenuOpen(false)}>{link}</Link>
-                            </li>
-                        ))}
-                        </ul>
-                    </div>
-                    )}
-                </div>
-                ))}
-            </nav>
+            {navItems.map(item => (
+              <div key={item.label} className="nav-item">
+                <Link
+                  to={item.label === "All" ? "/" : `/category/${item.label.toLowerCase()}`}
+                  className="nav-link"
+                >
+                  {item.label}
+                </Link>
+          
+                {item.links.length > 0 && (
+                  <div className="dropdown">
+                    <ul>
+                      {item.links.map(sub => (
+                        <li key={sub} className="dropdown-item">
+                          <Link
+                            to={`/category/${item.label.toLowerCase()}/${sub.toLowerCase().replace(/\s+/g, "-")}`}
+                            onClick={() => setMenuOpen(false)}
+                          >
+                            {sub}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
             )}
               </div>
               
@@ -159,20 +169,35 @@ const Header = () => {
         {menuOpen && (
         <div className="mobile-nav">
         <nav className="nav mobile-nav-links">
-            {navItems.map(item=>(
-            <div key={item.label} className="nav-item">
-                <Link to={item.label === "All" ? "/" : `/category/${item.label.toLowerCase()}`} className="nav-link"  onClick={() => setMenuOpen(false)}>
-                {item.label}
-                </Link>
-                
-                {item.links.length>0 && (
-                <div className="dropdown"><ul>
-                    {item.links.map(l=> <li key={l}><Link to={`/category/${l.toLowerCase()}`}onClick={() => setMenuOpen(false)}>{l}</Link></li>)}
-                </ul></div>
-                )}
+      {navItems.map(item => (
+        <div key={item.label} className="nav-item">
+          <Link
+            to={item.label === "All" ? "/" : `/category/${item.label.toLowerCase()}`}
+            className="nav-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            {item.label}
+          </Link>
+
+          {item.links.length > 0 && (
+            <div className="dropdown">
+              <ul>
+                {item.links.map(sub => (
+                  <li key={sub}>
+                    <Link
+                      to={`/category/${item.label.toLowerCase()}/${sub.toLowerCase().replace(/\s+/g, "-")}`}
+                      onClick={() => setMenuOpen(false)}
+                    >
+                      {sub}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            ))}
-          </nav>
+          )}
+        </div>
+      ))}
+    </nav>
           
           {/* bring top-bar into menu at bottom */}
           <div className="top-bar mobile-top-bar">

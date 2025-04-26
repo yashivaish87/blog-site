@@ -36,7 +36,7 @@ const BlogCategoryPage = () => {
                       <span>By {post.author}</span> | <span>{post.date}</span>
                     </div>
                     <p>{post.excerpt}</p>
-                    <Link to={`/post/${post.id}`} className="read-more-btn">Read More</Link>
+                    <Link to={`/blog/${post.id}`} className="read-more-btn">Read More</Link>
                   </div>
                 </div>
               ))}
