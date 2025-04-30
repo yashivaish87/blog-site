@@ -2,7 +2,7 @@ const posts = [
   {
     id: 1,
     title: "AI Transforming Patient Diagnosis",
-    image: "https://source.unsplash.com/800x600/?ai,healthcare",
+    image: "public/images/ai-healthcare.jpg",
     category: "Technology",
     subcategory: "AI",
     date: "April 25, 2025",
@@ -17,7 +17,7 @@ const posts = [
   {
     id: 2,
     title: "Building Scalable APIs with Node.js",
-    image: "https://source.unsplash.com/800x600/?code,api",
+    image: "https://source.unsplash.com/featured/?code,api",
     category: "Technology",
     subcategory: "Web Development",
     date: "April 24, 2025",
@@ -27,7 +27,7 @@ const posts = [
       "Node.js continues to dominate server-side JavaScript because of its event-driven architecture and npm ecosystem. To build scalable APIs, start by structuring routes with Express or Fastify, implement rate limiting with middleware like express-rate-limit, and use connection pooling for databases. Employ clustering or PM2 to take advantage of multiple CPU cores. Finally, monitor performance using APM tools such as New Relic or Datadog. Following these practices ensures your API can handle spikes in traffic while maintaining low latency.",
     featured: false,
     author: "Emily Carter",
-    trending: false,
+    trending: true,
   },
   {
     id: 3,

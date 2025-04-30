@@ -57,6 +57,7 @@
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   }
   
   .mobile-menu-button,
@@ -80,6 +81,7 @@
     text-decoration: none;
     padding: 0.25rem;
     transition: color 0.2s;
+    font-weight: 600;
   }
   
   .nav-link:hover {
@@ -156,7 +158,12 @@
   border-radius: 4px;
   overflow: hidden;
   z-index: 1000;
+  
 }
+.search-overlay .search-input{
+  caret-color: auto !important;
+}
+
   .mobile-menu-button{
     display: none; 
   }

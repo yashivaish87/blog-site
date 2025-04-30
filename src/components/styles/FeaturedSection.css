@@ -91,15 +91,15 @@
 .trending-sidebar h2 {
   margin-top: 10px;
   margin-bottom: 12px;
-  text-align: center;
+  padding-left: 2rem;
 }
 .trending-posts {
   display: flex;
   flex-direction: column;
-  border:1px solid #999;
-  border-radius: 1rem;
-  text-align: center;
-  padding:1rem 0;
+  /* border:1px solid #999;
+  border-radius: 1rem; */
+  /* text-align: center; */
+  padding:1rem 2rem;
   margin-top: auto;
   gap: 12px;
 }
@@ -111,6 +111,14 @@
   text-decoration: underline;
 }
 .trending-post .category {
+  font-size: 0.8rem;
+  color: #999;
+}
+.trending-post .separator{
+  padding: 0 4px;
+  color: #999;
+}
+.trending-post .date {
   font-size: 0.8rem;
   color: #999;
 }

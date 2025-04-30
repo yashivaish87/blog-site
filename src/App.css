@@ -2,6 +2,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  caret-color: transparent !important;
+  
 }
 :root {
   --color-primary: #007BFF;
@@ -16,4 +18,17 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 img { display: block; max-width: 100%; }
+
+h2 {
+  /* font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px; Increase space between letters */
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700; /* Use bold weight */
+    letter-spacing: 2px;
+  }
+  
+}
 

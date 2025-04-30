@@ -91,7 +91,9 @@ const Header = () => {
                     </button>
                     
             {/* logo */}
-            <h1 className="blog-title">My_Blog</h1>
+            <h1 className="blog-title">
+              <Link to="/" >My_Blog</Link>
+            </h1>
         
 
             {/* Navigation */}  

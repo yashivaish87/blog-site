@@ -32,6 +32,8 @@ const FeaturedSection = ({ featuredPosts, trendingPosts }) => {
           {trendingPosts.map(post => (
             <div key={post.id} className="trending-post">
               <h4><Link to={`/blog/${post.id}`}>{post.title}</Link></h4>
+              <span className="date">{post.date}</span>
+              <span className="separator"> • </span>
               <span className="category">{post.category}</span>
             </div>
           ))}
